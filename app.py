@@ -1,7 +1,11 @@
 from flask import Flask, request, jsonify
 import requests
+import json
+from flask_cors import CORS
+
 
 app = Flask(__name__)
+CORS(app)
 
 with open('config.json', 'r') as f:
     config = json.load(f)
